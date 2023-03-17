@@ -1,6 +1,84 @@
 {
     "pipes": [],
-    "interfaces": [],
+    "interfaces": [
+        {
+            "name": "DefaultTheme",
+            "id": "interface-DefaultTheme-cda8b723fd58bcbd37f0e66ec93eff139bc0455a2ba3a9fc34e9318de99991421b32ed2718df719f857c08f09eeb48377c9c5dd0d209b44ca024f5c598b6b9e3",
+            "file": "projects/afi-storybook/src/lib/styles/theme.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { DefaultTheme } from 'styled-components';\r\n\r\ndeclare module 'styled-components' {\r\n  export interface DefaultTheme {\r\n    name: 'light' | 'dark';\r\n    fonts: {\r\n      family: string;\r\n    };\r\n    spacing: typeof spacing;\r\n    color: typeof color;\r\n    borderRadius: typeof borderRadius;\r\n    boxShadow: typeof boxShadow;\r\n    typography: typeof typography;\r\n  }\r\n}\r\n\r\nconst baseColors = {\r\n  white: '#FFFFFF ',\r\n  black: '#202020',\r\n  otherBlack: '#2C2C2C ',\r\n  grey: {\r\n    base: '#909090',\r\n    light1: '#A6A6A6',\r\n    light2: '#BCBCBC',\r\n    light3: '#D2D2D2',\r\n    light4: '#E9E9E9',\r\n    light5: '#F5F6F7',\r\n    light6: '#F9F9F9',\r\n    dark1: '#797979',\r\n    dark2: '#636363',\r\n    dark3: '#4D4D4D',\r\n    dark4: '#363636',\r\n    dark5: '#2C2C2C',\r\n    dark6: '#202020',\r\n  },\r\n  green: {\r\n    base: '#E5F8BC',\r\n    light1: '#E8F9C3',\r\n    light2: '#EAF9C9',\r\n    light3: '#EDFAD0',\r\n    light4: '#EFFBD7',\r\n    light5: '#F2FCDE',\r\n    dark1: '#CEDFA9',\r\n    dark2: '#B7C696',\r\n    dark3: '#A0AE84',\r\n    dark4: '#899571',\r\n    dark5: '#737C5E',\r\n  },\r\n  blue: {\r\n    base: '#B1DDE4',\r\n    light1: '#B9E0E7',\r\n    light2: '#C1E4E9',\r\n    light3: '#C8E7EC',\r\n    light4: '#D0EBEF',\r\n    light5: '#D8EEF2',\r\n    dark1: '#9FC7CD',\r\n    dark2: '#8EB1B6',\r\n    dark3: '#7C9BA0',\r\n    dark4: '#6A8589',\r\n    dark5: '#596f72',\r\n  },\r\n};\r\n\r\nconst spaceUnit = 1;\r\n\r\nconst borderRadius = {\r\n  xs: '4px',\r\n  s: '8px',\r\n  m: '16px',\r\n  l: '24px',\r\n  xl: '32px',\r\n  xxl: '40px',\r\n  round: '50%',\r\n};\r\n\r\nconst spacing = {\r\n  xxs: `${0.25 * spaceUnit}em`,\r\n  xs: `${0.5 * spaceUnit}em`,\r\n  s: `${spaceUnit}em`,\r\n  m: `${1.25 * spaceUnit}em`,\r\n  l: `${2 * spaceUnit}em`,\r\n  xl: `${3.25 * spaceUnit}em`,\r\n  xxl: `${5.25 * spaceUnit}em`,\r\n};\r\n\r\nconst boxShadow = {\r\n  card: '0px 14px 26px 0px rgba(0, 0, 0, 0.08)',\r\n  inner: 'inset 0 3px 0 0 rgba(0, 0, 0, 0.05)',\r\n  outerBorder: `0 0 0 1px ${baseColors.blue.dark2}, 0 0 0 4px ${baseColors.blue.light5}`,\r\n};\r\n\r\nconst typography = {\r\n  fontSize: {\r\n    body: '1.125rem',\r\n    bodyS: '1rem',\r\n    bodyXS: '0.9rem',\r\n    bodyXXS: '0.72rem',\r\n    heading1: '2.74rem',\r\n    heading2: '2.19rem',\r\n    heading3: '1.75rem',\r\n    heading4: '1.4rem',\r\n  },\r\n  fontWeight: {\r\n    black: '900',\r\n    bold: '700',\r\n    medium: '500',\r\n    regular: '400',\r\n  },\r\n};\r\n\r\nconst color = {\r\n  accentText: baseColors.black,\r\n  badgeBackground: baseColors.grey.light4,\r\n  badgeText: baseColors.grey.dark2,\r\n  cartButtonText: baseColors.grey.base,\r\n  bannerBackground: baseColors.blue.base,\r\n  buttonClear: 'transparent',\r\n  buttonClearHover: baseColors.grey.light5,\r\n  buttonPrimary: baseColors.grey.dark6,\r\n  buttonPrimaryHover: baseColors.grey.dark5, // recheck\r\n  buttonSecondary: baseColors.green.base,\r\n  buttonSecondaryHover: baseColors.green.dark1, // recheck\r\n  buttonText: baseColors.white,\r\n  cardBackground: baseColors.grey.light6,\r\n  checkoutTopBackground: baseColors.green.base,\r\n  checkoutBottomBackground: baseColors.grey.light6,\r\n  formBackground: baseColors.white,\r\n  foodItemBackground: baseColors.white,\r\n  footerBackground: baseColors.grey.dark5,\r\n  headerBackground: baseColors.white,\r\n  restaurantDetailBackground: baseColors.white,\r\n  headerBorder: baseColors.grey.light4,\r\n  inputBackground: baseColors.grey.light5,\r\n  inputHint: baseColors.grey.dark1,\r\n  inputIcon: baseColors.grey.dark6,\r\n  label: baseColors.grey.dark4,\r\n  labelActive: baseColors.grey.dark6,\r\n  menuSectionBackground: baseColors.grey.light6,\r\n  stepsIndicatorInnerBar: baseColors.grey.dark6,\r\n  stepsIndicatorOuterBar: baseColors.grey.light5,\r\n  orderSummaryBackground: baseColors.white,\r\n  overlayBackground: baseColors.white,\r\n  overlayHeader: baseColors.grey.light5,\r\n  primaryText: baseColors.otherBlack,\r\n  reviewText: baseColors.blue.dark5,\r\n  screenBackground: baseColors.white,\r\n  sidebarHeader: baseColors.grey.dark4,\r\n  sidebarFooter: baseColors.white,\r\n  skeletonBase: baseColors.grey.light4,\r\n  skeletonHighlight: baseColors.grey.light5,\r\n  topBannerBackground: baseColors.green.base,\r\n  newRestaurantTag: baseColors.green.base,\r\n  white: baseColors.white,\r\n  black: baseColors.black,\r\n};\r\n\r\nexport const lightTheme: DefaultTheme = {\r\n  borderRadius,\r\n  boxShadow,\r\n  color,\r\n  fonts: {\r\n    family: 'NunitoSans, sans-serif',\r\n  },\r\n  name: 'light',\r\n  spacing,\r\n  typography,\r\n};\r\n\r\nexport const darkTheme: DefaultTheme = {\r\n  ...lightTheme,\r\n  boxShadow: {\r\n    ...boxShadow,\r\n    outerBorder: `0 0 0 2px ${baseColors.blue.dark5}, 0 0 0 4px ${baseColors.blue.base}`,\r\n  },\r\n  color: {\r\n    ...lightTheme.color,\r\n    badgeBackground: baseColors.grey.dark4,\r\n    badgeText: baseColors.grey.light1,\r\n    cartButtonText: baseColors.grey.dark2,\r\n    bannerBackground: baseColors.grey.dark5,\r\n    buttonClearHover: baseColors.grey.dark4, // recheck\r\n    buttonPrimary: baseColors.green.base,\r\n    buttonPrimaryHover: baseColors.green.dark1, // recheck\r\n    buttonSecondary: baseColors.green.base,\r\n    buttonText: baseColors.otherBlack,\r\n    cardBackground: baseColors.grey.dark5,\r\n    checkoutTopBackground: baseColors.grey.dark6,\r\n    checkoutBottomBackground: baseColors.grey.dark1,\r\n    formBackground: baseColors.grey.dark5,\r\n    foodItemBackground: baseColors.otherBlack,\r\n    headerBackground: baseColors.grey.dark6,\r\n    restaurantDetailBackground: baseColors.grey.dark5,\r\n    headerBorder: baseColors.grey.dark4,\r\n    inputBackground: baseColors.grey.dark4,\r\n    inputIcon: baseColors.white,\r\n    inputHint: baseColors.grey.light1,\r\n    label: baseColors.grey.light4,\r\n    labelActive: baseColors.white,\r\n    menuSectionBackground: baseColors.grey.dark6,\r\n    stepsIndicatorInnerBar: baseColors.green.base,\r\n    stepsIndicatorOuterBar: baseColors.grey.dark4,\r\n    orderSummaryBackground: baseColors.grey.dark5,\r\n    overlayBackground: baseColors.grey.dark5,\r\n    overlayHeader: baseColors.grey.dark4,\r\n    primaryText: baseColors.white,\r\n    reviewText: baseColors.blue.base,\r\n    screenBackground: baseColors.grey.dark6,\r\n    sidebarHeader: baseColors.grey.dark4,\r\n    sidebarFooter: baseColors.grey.dark5,\r\n    skeletonBase: baseColors.grey.dark3,\r\n    skeletonHighlight: baseColors.grey.dark2,\r\n    topBannerBackground: baseColors.grey.dark5,\r\n  },\r\n  name: 'dark',\r\n};\r\n",
+            "properties": [
+                {
+                    "name": "borderRadius",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "boxShadow",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "fonts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "\"light\" | \"dark\"",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "spacing",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "typography",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        }
+    ],
     "injectables": [],
     "guards": [],
     "interceptors": [],
@@ -9,7 +87,7 @@
     "components": [
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-4dc66fd3c8c4251c729312393d17d4454530288c8fc14e04c41a5348d532be32083a20b96130a9aedff33c0fff96f9a3f1d2e21409f4d016901dfc1e8e3ee38f",
+            "id": "component-ButtonComponent-988f5cfcea86dc09b3349eb64266b469060f11fc7de7f641fb194336d06c92222c9ce25730dcf52f99183fe4d5f04f9fab77d005439f01a4f9872ca2b3578121",
             "file": "projects/afi-storybook/src/lib/components/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -81,8 +159,8 @@
             ],
             "outputsClass": [
                 {
-                    "name": "onClick",
-                    "defaultValue": "new EventEmitter<Event>()",
+                    "name": "click",
+                    "defaultValue": "new EventEmitter<string>()",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\n\nOptional click handler\n",
@@ -92,7 +170,18 @@
                 }
             ],
             "propertiesClass": [],
-            "methodsClass": [],
+            "methodsClass": [
+                {
+                    "name": "onClick",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 38,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -100,16 +189,16 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'lib-afi-button',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n})\nexport class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'lib-afi-button',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n})\nexport class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  click = new EventEmitter<string>();\n\n  onClick() {\n    this.click.emit('test');\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "button {\r\n  all: unset;\r\n  padding: 1rem;\r\n  border: solid 1px pink;\r\n  cursor: pointer;\r\n  &:hover {\r\n    background-color: pink;\r\n    border-color: black;\r\n  }\r\n\r\n  &.secondary {\r\n    background-color: green;\r\n    color: white;\r\n    border-color: black;\r\n    &:hover {\r\n      background-color: transparent;\r\n      color: black;\r\n    }\r\n  }\r\n\r\n  &.pink {\r\n    background: #ff00a2;\r\n    box-shadow: 0 4px 10px rgba(55, 55, 55, 0.3),\r\n      0 6px 35px rgb(200 55 150 / 70%);\r\n  }\r\n}\r\n",
+                    "data": "$pink: pink;\r\n$white: white;\r\n$black: black;\r\n\r\nbutton {\r\n  all: unset;\r\n  padding: 1rem;\r\n  border: solid 1px $pink;\r\n  cursor: pointer;\r\n  &:hover {\r\n    background-color: $pink;\r\n    border-color: $black;\r\n  }\r\n\r\n  &.secondary {\r\n    background-color: $pink;\r\n    color: $white;\r\n    border-color: $black;\r\n    &:hover {\r\n      background-color: transparent;\r\n      color: $black;\r\n    }\r\n  }\r\n}\r\n",
                     "styleUrl": "./button.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<button\n  type=\"button\"\n  [ngClass]=\"{ primary: primary }\"\n  [ngClass]=\"{ secondary: !primary }\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n>\n  Click Me!\n</button>\n"
+            "templateData": "<button\n  type=\"button\"\n  [ngClass]=\"{ primary: primary }\"\n  [ngClass]=\"{ secondary: !primary }\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  (click)=\"onClick()\"\n>\n  {{ label }}\n</button>\n"
         }
     ],
     "modules": [
@@ -161,6 +250,66 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "baseColors",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/afi-storybook/src/lib/styles/theme.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  white: '#FFFFFF ',\r\n  black: '#202020',\r\n  otherBlack: '#2C2C2C ',\r\n  grey: {\r\n    base: '#909090',\r\n    light1: '#A6A6A6',\r\n    light2: '#BCBCBC',\r\n    light3: '#D2D2D2',\r\n    light4: '#E9E9E9',\r\n    light5: '#F5F6F7',\r\n    light6: '#F9F9F9',\r\n    dark1: '#797979',\r\n    dark2: '#636363',\r\n    dark3: '#4D4D4D',\r\n    dark4: '#363636',\r\n    dark5: '#2C2C2C',\r\n    dark6: '#202020',\r\n  },\r\n  green: {\r\n    base: '#E5F8BC',\r\n    light1: '#E8F9C3',\r\n    light2: '#EAF9C9',\r\n    light3: '#EDFAD0',\r\n    light4: '#EFFBD7',\r\n    light5: '#F2FCDE',\r\n    dark1: '#CEDFA9',\r\n    dark2: '#B7C696',\r\n    dark3: '#A0AE84',\r\n    dark4: '#899571',\r\n    dark5: '#737C5E',\r\n  },\r\n  blue: {\r\n    base: '#B1DDE4',\r\n    light1: '#B9E0E7',\r\n    light2: '#C1E4E9',\r\n    light3: '#C8E7EC',\r\n    light4: '#D0EBEF',\r\n    light5: '#D8EEF2',\r\n    dark1: '#9FC7CD',\r\n    dark2: '#8EB1B6',\r\n    dark3: '#7C9BA0',\r\n    dark4: '#6A8589',\r\n    dark5: '#596f72',\r\n  },\r\n}"
+            },
+            {
+                "name": "borderRadius",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/afi-storybook/src/lib/styles/theme.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  xs: '4px',\r\n  s: '8px',\r\n  m: '16px',\r\n  l: '24px',\r\n  xl: '32px',\r\n  xxl: '40px',\r\n  round: '50%',\r\n}"
+            },
+            {
+                "name": "boxShadow",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/afi-storybook/src/lib/styles/theme.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  card: '0px 14px 26px 0px rgba(0, 0, 0, 0.08)',\r\n  inner: 'inset 0 3px 0 0 rgba(0, 0, 0, 0.05)',\r\n  outerBorder: `0 0 0 1px ${baseColors.blue.dark2}, 0 0 0 4px ${baseColors.blue.light5}`,\r\n}"
+            },
+            {
+                "name": "color",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/afi-storybook/src/lib/styles/theme.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  accentText: baseColors.black,\r\n  badgeBackground: baseColors.grey.light4,\r\n  badgeText: baseColors.grey.dark2,\r\n  cartButtonText: baseColors.grey.base,\r\n  bannerBackground: baseColors.blue.base,\r\n  buttonClear: 'transparent',\r\n  buttonClearHover: baseColors.grey.light5,\r\n  buttonPrimary: baseColors.grey.dark6,\r\n  buttonPrimaryHover: baseColors.grey.dark5, // recheck\r\n  buttonSecondary: baseColors.green.base,\r\n  buttonSecondaryHover: baseColors.green.dark1, // recheck\r\n  buttonText: baseColors.white,\r\n  cardBackground: baseColors.grey.light6,\r\n  checkoutTopBackground: baseColors.green.base,\r\n  checkoutBottomBackground: baseColors.grey.light6,\r\n  formBackground: baseColors.white,\r\n  foodItemBackground: baseColors.white,\r\n  footerBackground: baseColors.grey.dark5,\r\n  headerBackground: baseColors.white,\r\n  restaurantDetailBackground: baseColors.white,\r\n  headerBorder: baseColors.grey.light4,\r\n  inputBackground: baseColors.grey.light5,\r\n  inputHint: baseColors.grey.dark1,\r\n  inputIcon: baseColors.grey.dark6,\r\n  label: baseColors.grey.dark4,\r\n  labelActive: baseColors.grey.dark6,\r\n  menuSectionBackground: baseColors.grey.light6,\r\n  stepsIndicatorInnerBar: baseColors.grey.dark6,\r\n  stepsIndicatorOuterBar: baseColors.grey.light5,\r\n  orderSummaryBackground: baseColors.white,\r\n  overlayBackground: baseColors.white,\r\n  overlayHeader: baseColors.grey.light5,\r\n  primaryText: baseColors.otherBlack,\r\n  reviewText: baseColors.blue.dark5,\r\n  screenBackground: baseColors.white,\r\n  sidebarHeader: baseColors.grey.dark4,\r\n  sidebarFooter: baseColors.white,\r\n  skeletonBase: baseColors.grey.light4,\r\n  skeletonHighlight: baseColors.grey.light5,\r\n  topBannerBackground: baseColors.green.base,\r\n  newRestaurantTag: baseColors.green.base,\r\n  white: baseColors.white,\r\n  black: baseColors.black,\r\n}"
+            },
+            {
+                "name": "darkTheme",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/afi-storybook/src/lib/styles/theme.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "DefaultTheme",
+                "defaultValue": "{\r\n  ...lightTheme,\r\n  boxShadow: {\r\n    ...boxShadow,\r\n    outerBorder: `0 0 0 2px ${baseColors.blue.dark5}, 0 0 0 4px ${baseColors.blue.base}`,\r\n  },\r\n  color: {\r\n    ...lightTheme.color,\r\n    badgeBackground: baseColors.grey.dark4,\r\n    badgeText: baseColors.grey.light1,\r\n    cartButtonText: baseColors.grey.dark2,\r\n    bannerBackground: baseColors.grey.dark5,\r\n    buttonClearHover: baseColors.grey.dark4, // recheck\r\n    buttonPrimary: baseColors.green.base,\r\n    buttonPrimaryHover: baseColors.green.dark1, // recheck\r\n    buttonSecondary: baseColors.green.base,\r\n    buttonText: baseColors.otherBlack,\r\n    cardBackground: baseColors.grey.dark5,\r\n    checkoutTopBackground: baseColors.grey.dark6,\r\n    checkoutBottomBackground: baseColors.grey.dark1,\r\n    formBackground: baseColors.grey.dark5,\r\n    foodItemBackground: baseColors.otherBlack,\r\n    headerBackground: baseColors.grey.dark6,\r\n    restaurantDetailBackground: baseColors.grey.dark5,\r\n    headerBorder: baseColors.grey.dark4,\r\n    inputBackground: baseColors.grey.dark4,\r\n    inputIcon: baseColors.white,\r\n    inputHint: baseColors.grey.light1,\r\n    label: baseColors.grey.light4,\r\n    labelActive: baseColors.white,\r\n    menuSectionBackground: baseColors.grey.dark6,\r\n    stepsIndicatorInnerBar: baseColors.green.base,\r\n    stepsIndicatorOuterBar: baseColors.grey.dark4,\r\n    orderSummaryBackground: baseColors.grey.dark5,\r\n    overlayBackground: baseColors.grey.dark5,\r\n    overlayHeader: baseColors.grey.dark4,\r\n    primaryText: baseColors.white,\r\n    reviewText: baseColors.blue.base,\r\n    screenBackground: baseColors.grey.dark6,\r\n    sidebarHeader: baseColors.grey.dark4,\r\n    sidebarFooter: baseColors.grey.dark5,\r\n    skeletonBase: baseColors.grey.dark3,\r\n    skeletonHighlight: baseColors.grey.dark2,\r\n    topBannerBackground: baseColors.grey.dark5,\r\n  },\r\n  name: 'dark',\r\n}"
+            },
+            {
+                "name": "lightTheme",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/afi-storybook/src/lib/styles/theme.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "DefaultTheme",
+                "defaultValue": "{\r\n  borderRadius,\r\n  boxShadow,\r\n  color,\r\n  fonts: {\r\n    family: 'NunitoSans, sans-serif',\r\n  },\r\n  name: 'light',\r\n  spacing,\r\n  typography,\r\n}"
+            },
+            {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -168,7 +317,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ButtonComponent>",
-                "defaultValue": "{\n  title: 'Button',\n  component: ButtonComponent,\n  argTypes: {\n    primary: { options: ['primary', 'secondary'], control: { type: 'radio' } },\n    backgroundColor: {\n      control: 'color',\n    },\n    onClick: { action: 'Button Clicked!' },\n  },\n}"
+                "defaultValue": "{\n  title: 'Button',\n  component: ButtonComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    primary: { options: ['primary', 'secondary'], control: { type: 'radio' } },\n    backgroundColor: {\n      control: 'color',\n    },\n    onClick: { action: 'click' },\n  },\n}"
             },
             {
                 "name": "preview",
@@ -199,6 +348,36 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    primary: false,\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "spaceUnit",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/afi-storybook/src/lib/styles/theme.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "number",
+                "defaultValue": "1"
+            },
+            {
+                "name": "spacing",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/afi-storybook/src/lib/styles/theme.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  xxs: `${0.25 * spaceUnit}em`,\r\n  xs: `${0.5 * spaceUnit}em`,\r\n  s: `${spaceUnit}em`,\r\n  m: `${1.25 * spaceUnit}em`,\r\n  l: `${2 * spaceUnit}em`,\r\n  xl: `${3.25 * spaceUnit}em`,\r\n  xxl: `${5.25 * spaceUnit}em`,\r\n}"
+            },
+            {
+                "name": "typography",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/afi-storybook/src/lib/styles/theme.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  fontSize: {\r\n    body: '1.125rem',\r\n    bodyS: '1rem',\r\n    bodyXS: '0.9rem',\r\n    bodyXXS: '0.72rem',\r\n    heading1: '2.74rem',\r\n    heading2: '2.19rem',\r\n    heading3: '1.75rem',\r\n    heading4: '1.4rem',\r\n  },\r\n  fontWeight: {\r\n    black: '900',\r\n    bold: '700',\r\n    medium: '500',\r\n    regular: '400',\r\n  },\r\n}"
             }
         ],
         "functions": [],
@@ -217,6 +396,98 @@
         ],
         "enumerations": [],
         "groupedVariables": {
+            "projects/afi-storybook/src/lib/styles/theme.ts": [
+                {
+                    "name": "baseColors",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/afi-storybook/src/lib/styles/theme.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  white: '#FFFFFF ',\r\n  black: '#202020',\r\n  otherBlack: '#2C2C2C ',\r\n  grey: {\r\n    base: '#909090',\r\n    light1: '#A6A6A6',\r\n    light2: '#BCBCBC',\r\n    light3: '#D2D2D2',\r\n    light4: '#E9E9E9',\r\n    light5: '#F5F6F7',\r\n    light6: '#F9F9F9',\r\n    dark1: '#797979',\r\n    dark2: '#636363',\r\n    dark3: '#4D4D4D',\r\n    dark4: '#363636',\r\n    dark5: '#2C2C2C',\r\n    dark6: '#202020',\r\n  },\r\n  green: {\r\n    base: '#E5F8BC',\r\n    light1: '#E8F9C3',\r\n    light2: '#EAF9C9',\r\n    light3: '#EDFAD0',\r\n    light4: '#EFFBD7',\r\n    light5: '#F2FCDE',\r\n    dark1: '#CEDFA9',\r\n    dark2: '#B7C696',\r\n    dark3: '#A0AE84',\r\n    dark4: '#899571',\r\n    dark5: '#737C5E',\r\n  },\r\n  blue: {\r\n    base: '#B1DDE4',\r\n    light1: '#B9E0E7',\r\n    light2: '#C1E4E9',\r\n    light3: '#C8E7EC',\r\n    light4: '#D0EBEF',\r\n    light5: '#D8EEF2',\r\n    dark1: '#9FC7CD',\r\n    dark2: '#8EB1B6',\r\n    dark3: '#7C9BA0',\r\n    dark4: '#6A8589',\r\n    dark5: '#596f72',\r\n  },\r\n}"
+                },
+                {
+                    "name": "borderRadius",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/afi-storybook/src/lib/styles/theme.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  xs: '4px',\r\n  s: '8px',\r\n  m: '16px',\r\n  l: '24px',\r\n  xl: '32px',\r\n  xxl: '40px',\r\n  round: '50%',\r\n}"
+                },
+                {
+                    "name": "boxShadow",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/afi-storybook/src/lib/styles/theme.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  card: '0px 14px 26px 0px rgba(0, 0, 0, 0.08)',\r\n  inner: 'inset 0 3px 0 0 rgba(0, 0, 0, 0.05)',\r\n  outerBorder: `0 0 0 1px ${baseColors.blue.dark2}, 0 0 0 4px ${baseColors.blue.light5}`,\r\n}"
+                },
+                {
+                    "name": "color",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/afi-storybook/src/lib/styles/theme.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  accentText: baseColors.black,\r\n  badgeBackground: baseColors.grey.light4,\r\n  badgeText: baseColors.grey.dark2,\r\n  cartButtonText: baseColors.grey.base,\r\n  bannerBackground: baseColors.blue.base,\r\n  buttonClear: 'transparent',\r\n  buttonClearHover: baseColors.grey.light5,\r\n  buttonPrimary: baseColors.grey.dark6,\r\n  buttonPrimaryHover: baseColors.grey.dark5, // recheck\r\n  buttonSecondary: baseColors.green.base,\r\n  buttonSecondaryHover: baseColors.green.dark1, // recheck\r\n  buttonText: baseColors.white,\r\n  cardBackground: baseColors.grey.light6,\r\n  checkoutTopBackground: baseColors.green.base,\r\n  checkoutBottomBackground: baseColors.grey.light6,\r\n  formBackground: baseColors.white,\r\n  foodItemBackground: baseColors.white,\r\n  footerBackground: baseColors.grey.dark5,\r\n  headerBackground: baseColors.white,\r\n  restaurantDetailBackground: baseColors.white,\r\n  headerBorder: baseColors.grey.light4,\r\n  inputBackground: baseColors.grey.light5,\r\n  inputHint: baseColors.grey.dark1,\r\n  inputIcon: baseColors.grey.dark6,\r\n  label: baseColors.grey.dark4,\r\n  labelActive: baseColors.grey.dark6,\r\n  menuSectionBackground: baseColors.grey.light6,\r\n  stepsIndicatorInnerBar: baseColors.grey.dark6,\r\n  stepsIndicatorOuterBar: baseColors.grey.light5,\r\n  orderSummaryBackground: baseColors.white,\r\n  overlayBackground: baseColors.white,\r\n  overlayHeader: baseColors.grey.light5,\r\n  primaryText: baseColors.otherBlack,\r\n  reviewText: baseColors.blue.dark5,\r\n  screenBackground: baseColors.white,\r\n  sidebarHeader: baseColors.grey.dark4,\r\n  sidebarFooter: baseColors.white,\r\n  skeletonBase: baseColors.grey.light4,\r\n  skeletonHighlight: baseColors.grey.light5,\r\n  topBannerBackground: baseColors.green.base,\r\n  newRestaurantTag: baseColors.green.base,\r\n  white: baseColors.white,\r\n  black: baseColors.black,\r\n}"
+                },
+                {
+                    "name": "darkTheme",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/afi-storybook/src/lib/styles/theme.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "DefaultTheme",
+                    "defaultValue": "{\r\n  ...lightTheme,\r\n  boxShadow: {\r\n    ...boxShadow,\r\n    outerBorder: `0 0 0 2px ${baseColors.blue.dark5}, 0 0 0 4px ${baseColors.blue.base}`,\r\n  },\r\n  color: {\r\n    ...lightTheme.color,\r\n    badgeBackground: baseColors.grey.dark4,\r\n    badgeText: baseColors.grey.light1,\r\n    cartButtonText: baseColors.grey.dark2,\r\n    bannerBackground: baseColors.grey.dark5,\r\n    buttonClearHover: baseColors.grey.dark4, // recheck\r\n    buttonPrimary: baseColors.green.base,\r\n    buttonPrimaryHover: baseColors.green.dark1, // recheck\r\n    buttonSecondary: baseColors.green.base,\r\n    buttonText: baseColors.otherBlack,\r\n    cardBackground: baseColors.grey.dark5,\r\n    checkoutTopBackground: baseColors.grey.dark6,\r\n    checkoutBottomBackground: baseColors.grey.dark1,\r\n    formBackground: baseColors.grey.dark5,\r\n    foodItemBackground: baseColors.otherBlack,\r\n    headerBackground: baseColors.grey.dark6,\r\n    restaurantDetailBackground: baseColors.grey.dark5,\r\n    headerBorder: baseColors.grey.dark4,\r\n    inputBackground: baseColors.grey.dark4,\r\n    inputIcon: baseColors.white,\r\n    inputHint: baseColors.grey.light1,\r\n    label: baseColors.grey.light4,\r\n    labelActive: baseColors.white,\r\n    menuSectionBackground: baseColors.grey.dark6,\r\n    stepsIndicatorInnerBar: baseColors.green.base,\r\n    stepsIndicatorOuterBar: baseColors.grey.dark4,\r\n    orderSummaryBackground: baseColors.grey.dark5,\r\n    overlayBackground: baseColors.grey.dark5,\r\n    overlayHeader: baseColors.grey.dark4,\r\n    primaryText: baseColors.white,\r\n    reviewText: baseColors.blue.base,\r\n    screenBackground: baseColors.grey.dark6,\r\n    sidebarHeader: baseColors.grey.dark4,\r\n    sidebarFooter: baseColors.grey.dark5,\r\n    skeletonBase: baseColors.grey.dark3,\r\n    skeletonHighlight: baseColors.grey.dark2,\r\n    topBannerBackground: baseColors.grey.dark5,\r\n  },\r\n  name: 'dark',\r\n}"
+                },
+                {
+                    "name": "lightTheme",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/afi-storybook/src/lib/styles/theme.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "DefaultTheme",
+                    "defaultValue": "{\r\n  borderRadius,\r\n  boxShadow,\r\n  color,\r\n  fonts: {\r\n    family: 'NunitoSans, sans-serif',\r\n  },\r\n  name: 'light',\r\n  spacing,\r\n  typography,\r\n}"
+                },
+                {
+                    "name": "spaceUnit",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/afi-storybook/src/lib/styles/theme.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "defaultValue": "1"
+                },
+                {
+                    "name": "spacing",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/afi-storybook/src/lib/styles/theme.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  xxs: `${0.25 * spaceUnit}em`,\r\n  xs: `${0.5 * spaceUnit}em`,\r\n  s: `${spaceUnit}em`,\r\n  m: `${1.25 * spaceUnit}em`,\r\n  l: `${2 * spaceUnit}em`,\r\n  xl: `${3.25 * spaceUnit}em`,\r\n  xxl: `${5.25 * spaceUnit}em`,\r\n}"
+                },
+                {
+                    "name": "typography",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/afi-storybook/src/lib/styles/theme.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  fontSize: {\r\n    body: '1.125rem',\r\n    bodyS: '1rem',\r\n    bodyXS: '0.9rem',\r\n    bodyXXS: '0.72rem',\r\n    heading1: '2.74rem',\r\n    heading2: '2.19rem',\r\n    heading3: '1.75rem',\r\n    heading4: '1.4rem',\r\n  },\r\n  fontWeight: {\r\n    black: '900',\r\n    bold: '700',\r\n    medium: '500',\r\n    regular: '400',\r\n  },\r\n}"
+                }
+            ],
             "projects/afi-storybook/src/lib/components/button/Button.stories.ts": [
                 {
                     "name": "meta",
@@ -226,7 +497,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ButtonComponent>",
-                    "defaultValue": "{\n  title: 'Button',\n  component: ButtonComponent,\n  argTypes: {\n    primary: { options: ['primary', 'secondary'], control: { type: 'radio' } },\n    backgroundColor: {\n      control: 'color',\n    },\n    onClick: { action: 'Button Clicked!' },\n  },\n}"
+                    "defaultValue": "{\n  title: 'Button',\n  component: ButtonComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    primary: { options: ['primary', 'secondary'], control: { type: 'radio' } },\n    backgroundColor: {\n      control: 'color',\n    },\n    onClick: { action: 'click' },\n  },\n}"
                 },
                 {
                     "name": "Primary",
@@ -282,7 +553,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 16,
+        "count": 4,
         "status": "low",
         "files": [
             {
@@ -330,9 +601,108 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "ButtonComponent",
-                "coveragePercent": 80,
-                "coverageCount": "4/5",
-                "status": "very-good"
+                "coveragePercent": 66,
+                "coverageCount": "4/6",
+                "status": "good"
+            },
+            {
+                "filePath": "projects/afi-storybook/src/lib/styles/theme.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "DefaultTheme",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/afi-storybook/src/lib/styles/theme.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "baseColors",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/afi-storybook/src/lib/styles/theme.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "borderRadius",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/afi-storybook/src/lib/styles/theme.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "boxShadow",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/afi-storybook/src/lib/styles/theme.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "color",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/afi-storybook/src/lib/styles/theme.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "darkTheme",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/afi-storybook/src/lib/styles/theme.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "lightTheme",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/afi-storybook/src/lib/styles/theme.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "spaceUnit",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/afi-storybook/src/lib/styles/theme.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "spacing",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/afi-storybook/src/lib/styles/theme.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "typography",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
             }
         ]
     }
