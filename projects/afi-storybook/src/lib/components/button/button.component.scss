@@ -11,14 +11,4 @@ button {
     background-color: $pink;
     border-color: $black;
   }
-
-  &.secondary {
-    background-color: $pink;
-    color: $white;
-    border-color: $black;
-    &:hover {
-      background-color: transparent;
-      color: $black;
-    }
-  }
 }

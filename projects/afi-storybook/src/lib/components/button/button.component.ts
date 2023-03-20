@@ -10,12 +10,6 @@ import { CommonModule } from '@angular/common';
 })
 export class ButtonComponent {
   /**
-   * Is this the principal call to action on the page?
-   */
-  @Input()
-  primary = false;
-
-  /**
    * What background color to use
    */
   @Input()
