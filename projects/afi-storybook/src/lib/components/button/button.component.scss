@@ -1,6 +1,7 @@
 $pink: pink;
 $white: white;
 $black: black;
+$green: #86c49c;
 
 button {
   all: unset;
@@ -8,7 +9,7 @@ button {
   border: solid 1px $pink;
   cursor: pointer;
   &:hover {
-    background-color: $pink;
+    background-color: $green;
     border-color: $black;
   }
 }
