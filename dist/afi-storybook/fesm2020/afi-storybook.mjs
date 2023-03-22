@@ -31,10 +31,10 @@ ButtonComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ButtonCompo
         i0.ɵɵproperty("ngStyle", i0.ɵɵpureFunction1(2, _c0, ctx.backgroundColor));
         i0.ɵɵadvance(1);
         i0.ɵɵtextInterpolate1(" ", ctx.label, "\n");
-    } }, dependencies: [CommonModule, i1.NgStyle], styles: ["button[_ngcontent-%COMP%]{all:unset;padding:1rem;border:solid 1px pink;cursor:pointer}button[_ngcontent-%COMP%]:hover{background-color:#86c49c;border-color:#000}"] });
+    } }, dependencies: [CommonModule, i1.NgStyle], styles: ["button[_ngcontent-%COMP%]{all:unset;padding:1rem;border:solid 1px pink;cursor:pointer}button[_ngcontent-%COMP%]:hover{background-color:pink;border-color:#000}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ButtonComponent, [{
         type: Component,
-        args: [{ selector: 'lib-afi-button', standalone: true, imports: [CommonModule], template: "<button\n  type=\"button\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  (click)=\"onClick()\"\n>\n  {{ label }}\n</button>\n", styles: ["button{all:unset;padding:1rem;border:solid 1px pink;cursor:pointer}button:hover{background-color:#86c49c;border-color:#000}\n"] }]
+        args: [{ selector: 'lib-afi-button', standalone: true, imports: [CommonModule], template: "<button\n  type=\"button\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  (click)=\"onClick()\"\n>\n  {{ label }}\n</button>\n", styles: ["button{all:unset;padding:1rem;border:solid 1px pink;cursor:pointer}button:hover{background-color:pink;border-color:#000}\n"] }]
     }], null, { backgroundColor: [{
             type: Input
         }], label: [{

@@ -182,7 +182,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "$pink: pink;\r\n$white: white;\r\n$black: black;\r\n\r\nbutton {\r\n  all: unset;\r\n  padding: 1rem;\r\n  border: solid 1px $pink;\r\n  cursor: pointer;\r\n  &:hover {\r\n    background-color: $pink;\r\n    border-color: $black;\r\n  }\r\n}\r\n",
+                    "data": "$pink: pink;\r\n$white: white;\r\n$black: black;\r\n$green: #86c49c;\r\n\r\nbutton {\r\n  all: unset;\r\n  padding: 1rem;\r\n  border: solid 1px $pink;\r\n  cursor: pointer;\r\n  &:hover {\r\n    background-color: $green;\r\n    border-color: $black;\r\n  }\r\n}\r\n",
                     "styleUrl": "./button.component.scss"
                 }
             ],
